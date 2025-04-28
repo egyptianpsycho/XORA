@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "./Button";
 import { Element, Link as LinkScroll } from "react-scroll";
+import ScrollReveal from "scrollreveal";
 
 const Hero = () => {
+useEffect(()=> {
+  ScrollReveal().reveal('.tst-txt', {
+    distance: '100px',
+    origin: 'left',
+    duration: 800,
+    easing: 'ease-in-out',
+    delay: 200,
+    reset: false,
+  });
+  ScrollReveal().reveal('.hro-img', {
+    distance: '100px',
+    origin: 'bottom',
+    duration: 800,
+    easing: 'ease-in-out',
+    delay: 300,
+    reset: false,
+  });
+},[])
+
   return (
     <section
       className="relative pt-60 pb-40 max-lg:pt-52 max-lg:pb-36
@@ -10,7 +30,7 @@ const Hero = () => {
     >
       <Element name="hero">
         <div className="container">
-          <div className="relative z-2 max-w-512 max-lg:max-w-388">
+          <div className="relative z-2 max-w-512 max-lg:max-w-388 tst-txt">
             <div className="caption small-2 uppercase text-p3">
               Video Editing
             </div>
@@ -32,7 +52,7 @@ const Hero = () => {
             <img
               src="/images/hero.png"
               alt="hero img"
-              className="size-1230 max-lg:h-auto"
+              className="size-1230 max-lg:h-auto hro-img"
             />
           </div>
         </div>

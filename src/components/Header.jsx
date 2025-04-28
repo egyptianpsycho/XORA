@@ -1,12 +1,22 @@
 import { Link as LinkScroll } from "react-scroll";
 import React, { useEffect, useState } from "react";
 import clsx from "clsx";
-
+import ScrollReveal from "scrollreveal";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
+
+    ScrollReveal().reveal('.nav', {
+      distance: '50px',
+      origin: 'top',
+      duration: 800,
+      easing: 'ease-in-out',
+      delay: 100,
+      reset: false,
+    });
+
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 32);
     };
@@ -33,11 +43,11 @@ const Header = () => {
   return (
     <header
       className={clsx(
-        "fixed top-0 left-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4",
+        "fixed top-0 left-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4 header",
         hasScrolled && "py-2 bg-black-100 backdrop-blur-[8px]"
       )}
     >
-      <div className="container flex h-14 items-center max-lg:px-5">
+      <div className="container flex h-14 items-center max-lg:px-5 nav">
         <a className="lg:hidden flex-1 cursor-pointer z-2">
           <img src="/images/xora.svg" width={115} height={55} alt="logo" />
         </a>
