@@ -1,10 +1,11 @@
 import clsx from "clsx";
 import React, { useState } from "react";
-import SlideDown from "react-slidedown";
-import 'react-slidedown/lib/slidedown.css'
+import { motion } from "framer-motion"; // Make sure to import from framer-motion
+
 const FaqItem = ({ faq, index }) => {
   const [activeId, setActiveId] = useState(null);
   const active = activeId === faq.id;
+  
   return (
     <div className="relative z-2 mb-16">
       <div
@@ -29,16 +30,29 @@ const FaqItem = ({ faq, index }) => {
         </div>
 
         <div className={clsx('faq-icon relative flex size-12 justify-center items-center rounded-full border-2 border-s2 shadow-400 transition-all duration-500 group-hover:border-s4', active && 'before:bg-p1 after:bg-p1 after:rotate-0')}>
-            <div className="g4 size-11/12 rounded-full shadow-300" />
+          <div className="g4 size-11/12 rounded-full shadow-300" />
         </div>
       </div>
-      <SlideDown>
+
+      <motion.div
+        initial={{ opacity: 0, height: 0 }}
+        animate={{
+          opacity: active ? 1 : 0,
+          height: active ? "100px" : 0,
+        }}
+        transition={{
+          opacity: { duration: 0.5 },
+          height: { duration: 0.4, ease: "easeInOut" },
+        }}
+        style={{ overflow: "hidden" }}
+      >
         {activeId === faq.id && (
-            <div className="body-3 px-7 py-3.5">
-                {faq.answer}
-            </div>
+          <div className="body-3 px-7 py-3.5">
+            {faq.answer}
+          </div>
         )}
-      </SlideDown>
+      </motion.div>
+
       <div className={clsx("g5 -bottom-7 -top-7 left-0 right-0 -z-1 rounded-3xl opacity-0 transition-opacity duration-500 absolute", active && 'opacity-100')}>
         <div className="g4 absolute inset-0 -z-1 rounded-3xl" />
         <div className="absolute left-8 top-0 h-0.5 w-40 bg-p1 " />
