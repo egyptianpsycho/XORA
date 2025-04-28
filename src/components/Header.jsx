@@ -1,22 +1,13 @@
 import { Link as LinkScroll } from "react-scroll";
 import React, { useEffect, useState } from "react";
 import clsx from "clsx";
-import ScrollReveal from "scrollreveal";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
 
-    ScrollReveal().reveal('.nav', {
-      distance: '50px',
-      origin: 'top',
-      duration: 800,
-      easing: 'ease-in-out',
-      delay: 100,
-      reset: false,
-    });
-
+    
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 32);
     };

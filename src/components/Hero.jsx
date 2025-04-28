@@ -1,27 +1,8 @@
-import React, { useEffect } from "react";
+import React,  from "react";
 import Button from "./Button";
 import { Element, Link as LinkScroll } from "react-scroll";
-import ScrollReveal from "scrollreveal";
 
 const Hero = () => {
-useEffect(()=> {
-  ScrollReveal().reveal('.tst-txt', {
-    distance: '100px',
-    origin: 'left',
-    duration: 800,
-    easing: 'ease-in-out',
-    delay: 200,
-    reset: false,
-  });
-  ScrollReveal().reveal('.hro-img', {
-    distance: '100px',
-    origin: 'bottom',
-    duration: 800,
-    easing: 'ease-in-out',
-    delay: 300,
-    reset: false,
-  });
-},[])
 
   return (
     <section
