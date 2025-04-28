@@ -18,8 +18,10 @@ It focuses on providing a clean user interface, optimized performance, and easy 
 
 ## 📦 Built With
 
+- vite
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- CSS
 
 ## 📄 Installation
 
