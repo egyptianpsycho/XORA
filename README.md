@@ -12,7 +12,7 @@ It focuses on providing a clean user interface, optimized performance, and easy 
 - Easy to extend and customize
 
 ## 📸 Preview
-![image](https://github.com/user-attachments/assets/c6a0cfb3-947f-4600-9c17-bcccdb550d72)
+![image](https://github.com/user-attachments/assets/8dc535d0-9877-4af4-a8e8-1a339ffbd8c9)
 
 
 
