@@ -21,13 +21,13 @@ It focuses on providing a clean user interface, optimized performance, and easy 
 - vite
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- CSS
+
 
 ## 📄 Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/xora.git
+git clone https://github.com/egyptianpsycho/xora.git
 
 # Navigate into the project directory
 cd xora
